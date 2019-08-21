@@ -1,5 +1,14 @@
 // Made with Zdog.  Original design by Alex Pasquarella
 
+Zdog.Anchor.prototype.renderGraphSvg = function( svg ) {
+  if ( !svg ) {
+    throw new Error( 'svg is ' + svg + '. ' +
+      'SVG required for render. Check .renderGraphSvg( svg ).' );
+  }
+  this.flatGraph.forEach( function( item ) {
+    item.render( svg, Zdog.SvgRenderer );
+  });
+};
 
 // colors
 var red = '#F44';
