@@ -1,15 +1,36 @@
-let illo = new Zdog.Illustration({
+// Made with Zdog
+
+// create illo
+const illo = new Zdog.Illustration({
   // set canvas with selector
   element: '.zdog-canvas',
+  zoom: 4,
 });
 
-// add circle
+// circle
 new Zdog.Ellipse({
   addTo: illo,
-  diameter: 80,
-  stroke: 20,
+  diameter: 20,
+  translate: { z: 10 },
+  stroke: 5,
   color: '#636',
 });
 
-// update & render
-illo.updateRenderGraph();
+// square
+new Zdog.Rect({
+  addTo: illo,
+  width: 20,
+  height: 20,
+  translate: { z: -10 },
+  stroke: 3,
+  color: '#E62',
+  fill: true,
+});
+
+function animate() {
+  illo.rotate.y += 0.03;
+  illo.updateRenderGraph();
+  requestAnimationFrame( animate );
+}
+
+animate();
