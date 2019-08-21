@@ -4,13 +4,16 @@
 const illo = new Zdog.Illustration({
   // set canvas with selector
   element: '.zdog-canvas',
-  zoom: 4,
+  zoom: 5,
 });
 
 let timer = 0;
-
-let body = new Zdog.Shape({
+let rootIllust = new Zdog.Anchor({
   addTo: illo,
+  translate: {y:17.5, x:6},
+});
+let body = new Zdog.Shape({
+  addTo: rootIllust,
   stroke: 12,
   color: '#932',
   path: [ {}, { y: -7 } ],
@@ -80,7 +83,7 @@ new Zdog.Shape({
 });
 
 let leftArm = new Zdog.Shape({
-  addTo: illo,
+  addTo: rootIllust,
   stroke: 4.5,
   color: '#932',
   path: [ {x:3}, { x:-10, y: -6 }, { x:-8, y: -18 } ],
@@ -93,7 +96,7 @@ let leftArm = new Zdog.Shape({
 
 function animate() {
   timer+=0.025;
-  illo.rotate.z = Math.sin(timer*4)/2;
+  rootIllust.rotate.z = Math.sin(timer*4)/2;
   headAnchor.rotate.z = Math.sin(timer*4)/2;
   
 
