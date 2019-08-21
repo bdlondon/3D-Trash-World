@@ -7,24 +7,27 @@
 	<title>Testing Zdog</title>
 	<style>
 		.zdog-canvas {
-			background: #FDB;
 			cursor: move;
+		}
+		
+		#botbar {
 			position: absolute;
 			bottom: 0;
 			right: 0;
 			width: 100%;
-			height: 240px;
+			height: 240px;	
+			background: #FDB;
 		}
 	</style>
 </head>
 
 <body>
  
+<div id="botbar">
+	<canvas class="zdog-canvas" data-js="zdog-demo" width="340" height="240"></canvas>
+</div>
 
-<canvas class="zdog-canvas" data-js="zdog-demo" width="340" height="240"></canvas>
-
-
-<script src="zdog.dist.min.js"></script>
+<script src="zdog.dist.js"></script>
 <script src="zdog-demo.js"></script>
 </body>
 
