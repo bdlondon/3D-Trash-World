@@ -7,8 +7,8 @@
 	<title>Testing Zdog</title>
 	<style>
 		.zdog-canvas {
-			cursor: move;
-			display: inline;
+			display: block;
+			z-index: 1;
 		}
 		
 		#botbar {
@@ -18,10 +18,10 @@
 			left: 0;
 			width: 100%;
 			height: 240px;	
-			display: block;
-  			justify-content: flex-end;
+			display: flex;
+  			justify-content: right;
 			z-index: 2; 
-      background: #F001;
+			flex-direction: row;
 		}
 		
 		#botbarbg {
