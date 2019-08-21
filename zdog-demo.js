@@ -4,19 +4,27 @@
 const illo = new Zdog.Illustration({
   // set canvas with selector
   element: '.zdog-canvas',
-  zoom: 5,
+  zoom: 8,
 });
 
 let timer = 0;
 let rootIllust = new Zdog.Anchor({
   addTo: illo,
-  translate: {y:17.5, x:6},
+  translate: {y:14, x:9},
 });
 let body = new Zdog.Shape({
   addTo: rootIllust,
   stroke: 12,
-  color: '#932',
+  color: 'goldenrod',
   path: [ {}, { y: -7 } ],
+  translate: {},
+});
+
+new Zdog.Shape({
+  addTo: body,
+  stroke: 7,
+  color: 'gold',
+  path: [ {x:0, z:4}, { x:0, y: -7, z:4 } ],
   translate: {},
 });
 
@@ -28,8 +36,14 @@ let headAnchor = new Zdog.Anchor({
 let head = new Zdog.Shape({
   addTo: headAnchor,
   stroke: 12,
-  color: '#C20',
+  color: 'goldenrod',
   translate: {y:-5, z:4},
+});
+new Zdog.Shape({
+  addTo: head,
+  stroke: 11,
+  color: 'gold',
+  translate: {},
 });
 
 new Zdog.Ellipse({
@@ -85,9 +99,9 @@ new Zdog.Shape({
 let leftArm = new Zdog.Shape({
   addTo: rootIllust,
   stroke: 4.5,
-  color: '#932',
-  path: [ {x:3}, { x:-10, y: -6 }, { x:-8, y: -18 } ],
-  translate: {x:-5, y:-7},
+  color: 'goldenrod',
+  path: [ {}, { x:-10, y: -6 }, { x:-8, y: -18 } ],
+  translate: {x:-3, y:-7, z:-3},
   closed: false,
 });
 
