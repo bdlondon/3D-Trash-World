@@ -21,6 +21,17 @@
 			display: block;
   			justify-content: flex-end;
 			z-index: 2; 
+      background: #F001;
+		}
+		
+		#botbarbg {
+			bottom: 0;
+			right: 0;
+			left: 0;
+			height: 100px;
+			width:100%;
+			background: #F62;
+			position: absolute;
 		}
 	</style>
 </head>
@@ -32,7 +43,10 @@
 	
 	
 <div id="botbar">
+
 	<canvas class="zdog-canvas" data-js="zdog-demo" width="340" height="240"></canvas>
+	<div id="botbarbg">
+	</div>
 </div>
 
 <script src="zdog.dist.js"></script>
